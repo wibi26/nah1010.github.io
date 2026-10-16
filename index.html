@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pemasaran dan Bisnis Digital | SMK 17 Temanggung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--royal:#1d3fbf;--navy:#0b1a55;--cobalt:#2f5bea;--sky:#5b8def;--ice:#e4ecff;--mist:#f3f6ff;--line:#cdd8fa;--ink:#0e1738;--gold:#ffc93c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font:16px/1.7 'Figtree',system-ui,sans-serif;color:var(--ink);background:var(--mist)}
+h1,h2,h3{font-family:'Bricolage Grotesque','Figtree',system-ui,sans-serif;line-height:1.15;margin:0 0 .5em}
+a{color:var(--royal)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.site{background:var(--navy);color:#fff;position:sticky;top:0;z-index:5}
+.site .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:16px}
+.brand{color:#fff;text-decoration:none;font-weight:700;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.1rem}
+nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0}
+nav a{color:#cdd8fa;text-decoration:none;padding:8px 12px;border-radius:8px;display:block}
+nav a:hover{background:rgba(255,255,255,.14);color:#fff}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{background:var(--royal);color:#fff;padding:84px 0 92px}
+.hero h1{font-size:clamp(2.3rem,6.5vw,4.2rem);max-width:14ch}
+.hero p{max-width:56ch;font-size:1.15rem;color:#dbe4ff;margin-bottom:28px}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:700;margin-right:8px}
+.btn.ghost{background:transparent;color:#fff;border:2px solid #9db6ff}
+section.blok{padding:64px 0}
+.blok h2.judul{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:.4em}
+.blok .intro{max-width:64ch;font-size:1.1rem;margin-bottom:28px}
+.bg-mist{background:var(--mist)}
+.bg-ice{background:var(--ice)}
+.bg-white{background:#fff}
+.bg-navy{background:var(--navy);color:#fff}
+.bg-royal{background:var(--royal);color:#fff}
+.bg-navy .intro,.bg-royal .intro{color:#dbe4ff}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:#fff;color:var(--ink);border:1px solid var(--line);border-top:5px solid var(--royal);border-radius:12px;padding:20px}
+.card:nth-child(4n+2){border-top-color:var(--sky)}
+.card:nth-child(4n+3){border-top-color:var(--cobalt)}
+.card:nth-child(4n+4){border-top-color:var(--navy)}
+.card h3{font-size:1.15rem}
+.card p{margin:0}
+.misi{padding-left:0;list-style:none;display:grid;gap:12px;max-width:760px;counter-reset:m}
+.misi li{background:#fff;border-left:5px solid var(--cobalt);padding:14px 18px;border-radius:0 10px 10px 0}
+.misi li:nth-child(even){border-left-color:var(--sky)}
+.visi-box{background:var(--royal);color:#fff;border-radius:14px;padding:28px;font-size:1.3rem;max-width:760px;margin-bottom:28px;font-family:'Bricolage Grotesque',system-ui,sans-serif}
+.table-scroll{overflow-x:auto;margin-top:8px}
+table{width:100%;border-collapse:collapse;background:#fff;color:var(--ink);border:1px solid var(--line)}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--royal);color:#fff}
+tbody tr:nth-child(even){background:var(--mist)}
+.foto{position:relative;aspect-ratio:4/5;background:var(--ice);border:2px dashed var(--sky);border-radius:12px;display:grid;place-items:center;color:var(--royal);font-weight:600;text-align:center;overflow:hidden;margin-bottom:14px}
+.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.foto span{padding:12px;font-size:.95rem}
+.guru .role{color:var(--royal);font-weight:600;margin-bottom:6px}
+.juara{display:grid;grid-template-columns:minmax(200px,300px) 1fr;gap:24px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;align-items:start}
+.juara .foto{aspect-ratio:16/10;margin:0}
+.badge{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;padding:4px 12px;border-radius:999px;font-size:.9rem;margin-bottom:12px}
+.juara dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:16px 0 0}
+.juara h4{font-size:1.05rem;color:var(--royal);margin:14px 0 6px}
+.juara .lanjut{margin:18px 0 0;padding-top:14px;border-top:1px solid var(--line);font-weight:600}
+.juara dt{font-weight:600;color:var(--royal)}
+.juara dd{margin:0}
+.note{font-size:.9rem;color:#4b5a8f;margin-top:18px}
+.bg-navy .note,.bg-royal .note{color:#b9c8ff}
+.daftar{max-width:70ch;padding-left:1.2em}
+.daftar li{margin-bottom:.5em}
+footer{background:var(--navy);color:#b9c8ff;padding:30px 0;font-size:.95rem}
+@media(max-width:760px){
+.menu-btn{display:block}
+nav{display:none;position:absolute;left:0;right:0;top:60px;background:var(--navy);padding:8px 20px 16px}
+nav.open{display:block}
+nav ul{flex-direction:column}
+.hero{padding:56px 0 64px}
+section.blok{padding:48px 0}
+.juara{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="#beranda">Pemasaran & Bisnis Digital</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+<nav id="menu" aria-label="Menu utama"><ul><li><a href="#beranda">Beranda</a></li><li><a href="#visi-misi">Visi & Misi</a></li><li><a href="#kurikulum">Kurikulum</a></li><li><a href="#guru">Guru</a></li><li><a href="#kelas">Kelas</a></li><li><a href="#prestasi">Prestasi</a></li></ul></nav>
+</div></header>
+
+<section class="hero" id="beranda"><div class="wrap">
+<h1>Belajar memasarkan, mulai dari kelas.</h1>
+<p>Jurusan Pemasaran dan Bisnis Digital SMK 17 Temanggung membekali siswa dengan keterampilan jual-beli, promosi, dan bisnis online yang siap dipakai di dunia kerja maupun usaha sendiri.</p>
+<a class="btn" href="#kurikulum">Lihat kurikulum</a><a class="btn ghost" href="#guru">Kenali guru kami</a></div></section>
+
+<main>
+<section class="blok bg-white"><div class="wrap">
+<h2 class="judul">Tentang jurusan</h2>
+<p class="intro">Pemasaran dan Bisnis Digital adalah jurusan yang mengajarkan cara menjual produk dan jasa, baik secara langsung maupun lewat internet. Siswa belajar dari dasar bisnis, lalu berlatih membuat konten, mengelola toko online, melayani pelanggan, dan menghitung keuntungan. Pelajaran diperkuat dengan praktik di sekolah dan praktik kerja lapangan di dunia usaha.</p>
+<div class="grid"><div class="card"><h3>Pemasaran Digital</h3><p>Merancang promosi di media sosial, mengukur hasil iklan, dan membangun merek usaha.</p></div><div class="card"><h3>Toko Online</h3><p>Membuka dan mengelola toko di marketplace, mulai dari foto produk, deskripsi, sampai layanan pelanggan.</p></div><div class="card"><h3>Konten Kreatif</h3><p>Membuat foto, video pendek, dan desain grafis yang menarik untuk menjual produk.</p></div><div class="card"><h3>Kewirausahaan</h3><p>Menyusun rencana bisnis, menghitung modal dan keuntungan, lalu menjalankan usaha kecil di sekolah.</p></div></div>
+<h3 style="margin-top:36px">Setelah lulus, siswa bisa menjadi</h3>
+<ul class="daftar"><li>Staf pemasaran dan penjualan di perusahaan</li><li>Admin toko online dan marketplace</li><li>Pembuat konten dan pengelola media sosial</li><li>Wirausaha dengan usaha sendiri</li><li>Melanjutkan kuliah di bidang bisnis, manajemen, atau komunikasi</li></ul>
+</div></section>
+
+<section class="blok bg-ice" id="visi-misi"><div class="wrap">
+<h2 class="judul">Visi & Misi</h2>
+<p class="intro">Visi adalah cita-cita jurusan. Misi adalah langkah nyata untuk mencapainya.</p>
+<div class="visi-box">Menjadi jurusan unggulan yang menghasilkan lulusan kompeten, kreatif, dan berjiwa wirausaha di bidang pemasaran dan bisnis digital.</div>
+<h3>Misi</h3>
+<ol class="misi">
+<li>Menyelenggarakan pembelajaran pemasaran dan bisnis digital yang sesuai kebutuhan dunia usaha dan industri.</li>
+<li>Melatih siswa membuat konten, mengelola toko online, dan menjalankan promosi digital.</li>
+<li>Menumbuhkan jiwa wirausaha melalui projek dan praktik jual-beli yang nyata.</li>
+<li>Menjalin kerja sama dengan dunia usaha dan industri untuk praktik kerja lapangan.</li>
+<li>Membentuk lulusan yang jujur, disiplin, bertanggung jawab, dan mampu bekerja sama.</li>
+</ol>
+<p class="note">Teks ini contoh. Ganti dengan visi dan misi resmi jurusan.</p>
+</div></section>
+
+<section class="blok bg-royal" id="kurikulum"><div class="wrap">
+<h2 class="judul">Kurikulum</h2>
+<p class="intro">Pelajaran kejuruan disusun bertahap. Kelas X mengenalkan dasar bisnis dan alat digital, kelas XI memperdalam pemasaran, dan kelas XII berfokus pada projek usaha dan praktik di dunia kerja.</p>
+<div class="table-scroll"><table><thead><tr><th>Kelas</th><th>Mata pelajaran kejuruan</th><th>Yang dilatih</th></tr></thead><tbody><tr><td>X</td><td>Dasar Bisnis dan Manajemen, Komunikasi dalam Bisnis, Aplikasi Teknologi Digital, Fotografi dan Desain Grafis Dasar</td><td>Memahami cara kerja bisnis, berkomunikasi dengan pelanggan, dan memakai aplikasi untuk membuat materi promosi.</td></tr><tr><td>XI</td><td>Pemasaran Digital, Pengelolaan Bisnis Ritel, Perencanaan Bisnis, Produksi Konten Promosi</td><td>Merancang kampanye promosi, mengelola stok dan penjualan, serta menyusun rencana usaha.</td></tr><tr><td>XII</td><td>Toko Online dan Marketplace, Projek Kreatif dan Kewirausahaan, Praktik Kerja Lapangan (PKL)</td><td>Menjalankan toko online, membuat projek usaha, dan bekerja langsung di perusahaan mitra.</td></tr></tbody></table></div>
+<p class="note">Daftar ini contoh. Sesuaikan dengan kurikulum sekolah.</p>
+</div></section>
+
+<section class="blok bg-white" id="guru"><div class="wrap">
+<h2 class="judul">Guru</h2>
+<p class="intro">Para guru jurusan mendampingi siswa dari teori sampai praktik, termasuk saat lomba dan praktik kerja lapangan.</p>
+<div class="grid"><div class="card guru"><div class="foto"><span>Foto Rina Wulandari, S.Pd.</span><img src="foto/guru-1.jpg" alt="Foto Rina Wulandari, S.Pd." onerror="this.remove()"></div><h3>Rina Wulandari, S.Pd.</h3><p class="role">Kepala Program Keahlian</p><p>Mengampu Dasar Bisnis dan Manajemen. Berpengalaman membimbing siswa menyusun rencana bisnis dan mengikuti lomba kewirausahaan.</p></div><div class="card guru"><div class="foto"><span>Foto Budi Santoso, S.E.</span><img src="foto/guru-2.jpg" alt="Foto Budi Santoso, S.E." onerror="this.remove()"></div><h3>Budi Santoso, S.E.</h3><p class="role">Guru Pemasaran Digital</p><p>Mengampu Pemasaran Digital dan Toko Online. Membimbing siswa mengelola toko online sekolah dan kampanye promosi.</p></div><div class="card guru"><div class="foto"><span>Foto Agus Prasetyo, S.Kom.</span><img src="foto/guru-3.jpg" alt="Foto Agus Prasetyo, S.Kom." onerror="this.remove()"></div><h3>Agus Prasetyo, S.Kom.</h3><p class="role">Guru Desain dan Konten</p><p>Mengampu Fotografi, Desain Grafis, dan Produksi Konten. Membimbing siswa membuat video dan materi promosi.</p></div></div>
+<p class="note">Nama dan keterangan adalah contoh. Untuk memasang foto, simpan di folder foto dengan nama guru-1.jpg, guru-2.jpg, dan guru-3.jpg.</p>
+</div></section>
+
+<section class="blok bg-navy" id="kelas"><div class="wrap">
+<h2 class="judul">Kelas</h2>
+<p class="intro">Jurusan ini memiliki 6 kelas: dua kelas X, dua kelas XI, dan dua kelas XII. Tiap kelas didampingi seorang wali kelas.</p>
+<div class="table-scroll"><table><thead><tr><th>Kelas</th><th>Jumlah siswa</th><th>Wali kelas</th></tr></thead><tbody><tr><td>X PBD 1</td><td>32</td><td>Dewi Lestari, S.Pd.</td></tr><tr><td>X PBD 2</td><td>31</td><td>Agus Prasetyo, S.Kom.</td></tr><tr><td>XI PBD 1</td><td>30</td><td>Budi Santoso, S.E.</td></tr><tr><td>XI PBD 2</td><td>30</td><td>Rina Wulandari, S.Pd.</td></tr><tr><td>XII PBD 1</td><td>29</td><td>Budi Santoso, S.E.</td></tr><tr><td>XII PBD 2</td><td>28</td><td>Dewi Lestari, S.Pd.</td></tr></tbody></table></div>
+<p class="note">Data kelas adalah contoh. Ganti dengan data sebenarnya.</p>
+</div></section>
+
+<section class="blok bg-ice" id="prestasi"><div class="wrap">
+<h2 class="judul">Prestasi</h2>
+<p class="intro">Siswa jurusan ini aktif mengikuti lomba untuk mengasah keterampilan dan membawa nama sekolah.</p>
+<article class="juara">
+<div class="foto"><span>Foto juara lomba</span><img src="foto/juara-lomba.jpg" alt="Foto juara lomba" onerror="this.remove()"></div>
+<div>
+<span class="badge">Juara 1 &middot; 2026</span>
+<h3>Lomba Karya Konten Digital tingkat Kabupaten</h3>
+<h4>Cerita singkat</h4>
+<p>Semua berawal dari tugas kelas: membuat video promosi untuk keripik buatan warga sekitar sekolah. Hasilnya bagus, sehingga tim siswa memutuskan mendaftar lomba. Selama dua minggu mereka berlatih sepulang sekolah, mulai dari menulis naskah, mengambil gambar, sampai menyunting video. Kerja keras itu berbuah juara 1, dan keripik yang mereka promosikan ikut laris dipesan.</p>
+<p>Juara ini masih menjadi kebanggaan jurusan dan penyemangat bagi adik kelas untuk ikut lomba berikutnya.</p>
+<dl><dt>Tahun</dt><dd>2026</dd><dt>Pembimbing</dt><dd>Agus Prasetyo, S.Kom.</dd></dl>
+<p class="lanjut">Keterangan lebih lanjut, silakan cek web resmi SMK 17 Temanggung: <a href="https://www.smk17temanggungjaya.sch.id" target="_blank" rel="noopener">www.smk17temanggungjaya.sch.id</a></p>
+</div>
+</article>
+<p class="note">Foto dan cerita adalah contoh. Ganti dengan yang asli. Untuk memasang foto, simpan di folder foto dengan nama juara-lomba.jpg.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">Jurusan Pemasaran dan Bisnis Digital, SMK 17 Temanggung. &copy; <span id="tahun"></span></div></footer>
+<script>
+const btn = document.querySelector('.menu-btn');
+const nav = document.getElementById('menu');
+btn.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+});
+nav.addEventListener('click', e => { if (e.target.tagName === 'A') nav.classList.remove('open'); });
+document.getElementById('tahun').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
